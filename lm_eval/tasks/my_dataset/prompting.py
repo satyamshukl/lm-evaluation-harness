@@ -34,4 +34,13 @@ lm_eval --model hf \
     --apply_chat_template \
     --batch_size 8
     
-lm_eval --model hf \--model_args pretrained=meta-google/gemma-7b-it \--tasks halftruthdetection \--device cuda:2 \--batch_size 8 > output/gemma/instruct/p1.txt 2>&1
+lm_eval --model hf \--model_args pretrained=mistralai/Mistral-7B-Instruct-v0.2 \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/gemma/instruct/p1.txt 2>&1
+
+# INSTRUCT
+lm_eval --model hf \--model_args pretrained=google/gemma-7b-it \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/few\(5\)_shot/gemma/instruct/p3.txt 2>&1
+lm_eval --model hf \--model_args pretrained=meta-llama/Meta-Llama-3-8B-Instruct \--tasks halftruthdetectionfewshot \--device cuda:1 \--batch_size 8 > output/few\(5\)_shot/llama/instruct/p3.txt 2>&1
+lm_eval --model hf \--model_args pretrained=mistralai/Mistral-7B-Instruct-v0.2 \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/few\(5\)_shot/mistral/instruct/p3.txt 2>&1
+# BASE
+lm_eval --model hf \--model_args pretrained=google/gemma-7b \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/few\(5\)_shot/gemma/instruct/p3.txt 2>&1
+lm_eval --model hf \--model_args pretrained=mistral-community/Mistral-7B-v0.2 \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/few\(5\)_shot/mistral/instruct/p3.txt 2>&1
+lm_eval --model hf \--model_args pretrained=meta-llama/Meta-Llama-3-8B \--tasks halftruthdetectionfewshot \--device cuda:0 \--batch_size 8 > output/few\(5\)_shot/llama/instruct/p3.txt 2>&1
