@@ -21,3 +21,11 @@ lm_eval/caching/.cache
 # don't track files created by wandb
 wandb
 examples/wandb
+models/
+output/
+results
+lm_eval/tasks/my_dataset/staticQA
+lm_eval/tasks/my_dataset/halftruthlabelds
+lm_eval/tasks/my_dataset/htdetection.yaml
+lm_eval/tasks/my_dataset/htdetectionfewshot.yaml
+# finetuned_models

@@ -12,7 +12,11 @@ process_docs: !function utils.process_docs
 output_type: multiple_choice
 
 # doc_to_text: "Claim: {{claim}}\nEvidence: {{evidence}}\nClassify given claim based on evidence into one of the 5 labels: true, mostly-true, half-true, mostly-false, false, or pants-fire?\nAnswer: "
-doc_to_text: "You need to determine the accuracy of a claim based on the evidence. Use one of following 5 labels for each claim: true, mostly-true, half-true, mostly-false, or false. Examine the evidence and pick the most probable label according to the truthfulness of claim without explaining your reasoning. claim: {{claim}} evidence: {{evidence}} label: "
+# P1:
+doc_to_text: "Given claim and evidence, you are tasked with evaluating the truthfulness of claims based on the provided evidence. Each claim can be categorized into one of 5 labels: true, mostly-true, half-true, mostly-false, false. Assess the claim given the evidence and classify it appropriately without providing an explanation. claim: {{claim}} evidence: {{evidence}} label: "
+# P2:
+# doc_to_text: "You need to determine the accuracy of a claim based on the evidence. Use one of following 5 labels for each claim: true, mostly-true, half-true, mostly-false, or false. Examine the evidence and pick the most probable label according to the truthfulness of claim without explaining your reasoning. claim: {{claim}} evidence: {{evidence}} label: "
+
 
 
 doc_to_target: "{{label}}"
