@@ -14,6 +14,7 @@ output_type: multiple_choice
 # doc_to_text: "Claim: {{claim}}\nEvidence: {{evidence}}\nClassify given claim based on evidence into one of the 5 labels: true, mostly-true, half-true, mostly-false, false, or pants-fire?\nAnswer: "
 # doc_to_text: "You need to judge the truth of a claim based on the evidence given. Use one of these 5 labels for each claim: true, mostly-true, half-true, mostly-false, or false. Review the evidence and classify the claim without explaining your reasoning. claim: {{claim}} evidence: {{evidence}} label: "
 doc_to_text: "Based on the provided evidence, judge whether the claim is true, mostly-true, half-true, mostly-false, or false. claim: {{claim}} evidence: {{evidence}} label: "
+# doc_to_text: "Based on the provided evidence, find if the claim is true, mostly-true, half-true, mostly-false, or false. claim: {{claim}} evidence: {{evidence}} label: "
 
 
 
